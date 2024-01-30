@@ -17,6 +17,8 @@ import {
   View,
 } from 'react-native';
 
+import env from 'react-native-config';
+
 import {
   Colors,
   DebugInstructions,
@@ -28,6 +30,8 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+console.log(env.ENV_NAME);
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
